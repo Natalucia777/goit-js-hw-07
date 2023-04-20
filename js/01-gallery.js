@@ -7,7 +7,7 @@ function markup(items) {
   return items
     .map(({ preview, original, description }) => {
       return `<li class="gallery__item">
-            <a class="gallery__ref" href="${original}">
+            <a class="gallery__link" href="${original}">
                 <img class="gallery__img" src="${preview}" data-src="${original}" alt="${description}" />
             </a>
             </li>`; }).join('');}
