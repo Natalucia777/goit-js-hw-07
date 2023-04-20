@@ -3,6 +3,7 @@ import { galleryItems } from './gallery-items.js';
 const galleryContent = document.querySelector('.gallery');
 galleryContent.innerHTML = markup(galleryItems);
 galleryContent.addEventListener('click', onGetImage);
+
 function markup(items) {
   return items
     .map(({ preview, original, description }) => {
@@ -14,7 +15,8 @@ function markup(items) {
 function onActiveButton(element) {
     if (element.code === "Escape") {
       instance.close();}
-    }
+}
+    
 function onGetImage(element) {
   element.preventDefault();
   const { target } = element;
@@ -25,4 +27,5 @@ function onGetImage(element) {
       onClose: () => window.removeEventListener('keydown', onActiveButton), });
   content.show(); 
 }
-console.log(galleryItems);  
+
+// console.log(galleryItems);  
