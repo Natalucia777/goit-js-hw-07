@@ -12,8 +12,9 @@ function markup(items) {
 galleryContent.innerHTML = markup(galleryItems);
 //4
 let gallery = new SimpleLightbox('ul.gallery a');
-  gallery.on('show.simplelightbox', function () {
-	
-  // do something…
-});
-
+  gallery.on('show.simplelightbox', optionsTitle());
+function optionsTitle() {
+    captionsData: 'alt',
+    captionPosition: 'bottom',
+    captionDelay: 250,
+};
